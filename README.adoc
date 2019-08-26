@@ -1,0 +1,25 @@
+= Pivotal Cloud Foundry Workshop
+
+== Schedule
+
+This is hands-on classroom style session will provide developers (and operators) with hands on experience with Pivotal Cloud Foundry concepts, architecture and fundamentals of pushing code and building applications. The session includes presentations, demos and hands on labs
+
+10:30 AM - 10:40 AM::
+ * Introduction
+10:40 AM - 11:20 AM::
+ * _Pivotal and PCF Overview_
+11:20 AM - 11:50 AM::
+* _Services & Marketplace_
+11:50 PM - 12:30 PM::
+* _Labs_
+
+== Course Materials
+
+* Presentation: link:https://docs.google.com/presentation/d/1G2PqWQHOqhxnZXPTuho_Lg9RRMZcr4-JpSsibT3V16Q[PCF & Services]
+
+* Developer Workshop
+** Pre-work
+*** link:labs/labaccess.adoc[Get Environment Access]
+** link:./00-introduction-to-cli.en.md[Lab 1 - Introduction to CLI]
+** link:./01-building-a-spring-boot-application.en.md[Lab 2 - Build a Spring Boot Application]
+** link:./02-adding-persistence-to-boot-application.en.md[Lab 3 - Add Data Persistence to Application]

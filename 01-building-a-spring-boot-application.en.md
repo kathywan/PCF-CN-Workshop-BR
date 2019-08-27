@@ -29,8 +29,8 @@ Within your editor/IDE complete the following steps:
 * Create
 a new class named `GreetingController` in the same package.
 * Add an `@RestController` annotation to the class
-`GreetingController` (i.e.,
-**/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java**).
+`io.pivotal.cloudnativespring.GreetingController` (i.e.,
+**/cloud-native-spring/src/main/java/io/pivotal/cloudnativespring/GreetingController.java**).
 
 Completed:
 

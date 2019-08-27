@@ -21,34 +21,6 @@ Dependencies:
 
 Open this project in your editor/IDE of choice.
 
-
-
-<ol><li>Select _File
-&gt; Import…_</li>
-<li>In the subsequent dialog choose _Gradle &gt; Existing
-Gradle Project_ then click the _Next_ button.</li>
-<li>In the _Import Gradle
-Project_ dialog browse to the _cloud-native-spring_ directory (e.g.
-`cloud-native-spring/labs/my_work/cloud-native-spring`) then click the
-_Open_ button, then click the _Finish_ button.</li>
-</ol>
-</details>
-
-<details>
-<summary>_STS/Eclipse Import with Maven Help_</summary>
-
-<ol><li>Select _File &gt; Import…_</li>
-
-<li>In the subsequent dialog choose
-_Maven &gt; Existing Maven Project_ then click the _Next_ button.</li>
-
-<li>In
-the _Import Maven Project_ dialog browse to the
-_cloud-native-spring_ directory (e.g.
-`cloud-native-spring/labs/my_work/cloud-native-spring`) then click the
-_Open_ button, then click the _Finish_ button.</li>
-</details>
-
 ## Add an Endpoint
 Within your editor/IDE complete the following steps:
 

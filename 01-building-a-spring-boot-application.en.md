@@ -5,78 +5,33 @@ a standard greeting.
 
 ## Getting started
 
-While we could visit
-https://start.spring.io to create a new Spring Boot project, we will
-start with a skeleton. Open a Terminal (e.g., *cmd* or *bash* shell). Change the working directory to be
-`PCF-CN-Workshop-BR/labs/my_work/cloud-native-spring`
+Let's go to https://start.spring.io to create a new Spring Boot project with the following details:
 
-```bash
-cd PCF-CN-Workshop-BR/labs/my_work/cloud-native-spring
-```
+Group: io.pivotal
+
+Artifact: cloud-native-spring
+
+Dependencies:
+
+- Spring Web Starter
+- Spring Data JPA
+- Rest Repositories
+- Spring Boot Actuator
+- Spring Boot DevTools
+- Lombok
+- H2
 
 Open this project in your editor/IDE of choice.
-
-<details>
-<summary>_STS/Eclipse Import with Gradle Help_</summary>
-
-<ol><li>Select _File
-&gt; Import…_</li>
-<li>In the subsequent dialog choose _Gradle &gt; Existing
-Gradle Project_ then click the _Next_ button.</li>
-<li>In the _Import Gradle
-Project_ dialog browse to the _cloud-native-spring_ directory (e.g.
-`cloud-native-spring/labs/my_work/cloud-native-spring`) then click the
-_Open_ button, then click the _Finish_ button.</li>
-</ol>
-</details>
-
-<details>
-<summary>_STS/Eclipse Import with Maven Help_</summary>
-
-<ol><li>Select _File &gt; Import…_</li>
-
-<li>In the subsequent dialog choose
-_Maven &gt; Existing Maven Project_ then click the _Next_ button.</li>
-
-<li>In
-the _Import Maven Project_ dialog browse to the
-_cloud-native-spring_ directory (e.g.
-`cloud-native-spring/labs/my_work/cloud-native-spring`) then click the
-_Open_ button, then click the _Finish_ button.</li>
-</details>
 
 ## Add an Endpoint
 Within your editor/IDE complete the following steps:
 
-* Create a new
-package `io.pivotal.controller` underneath **src/main/java**.
 * Create
-a new class named `GreetingController` in the aforementioned package.
+a new class named `GreetingController` in the same package.
 * Add an `@RestController` annotation to the class
-`io.pivotal.controller.GreetingController` (i.e.,
-**/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java**).
+`io.pivotal.cloudnativespring.GreetingController` (i.e.,
+**/cloud-native-spring/src/main/java/io/pivotal/cloudnativespring/GreetingController.java**).
 
-```java
-package io.pivotal.controller;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class GreetingController {
-
-}
-```
-
-Add the following request handler to the class
-`io.pivotal.controller.GreetingController` (i.e.,
-_/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java_).
-
-```java
-@GetMapping("/")
-public String hello() {
-  return "Hello World!";
-}
-```
 Completed:
 
 ```java

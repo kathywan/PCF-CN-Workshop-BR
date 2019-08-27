@@ -8,7 +8,9 @@ a standard greeting.
 Let's go to https://start.spring.io to create a new Spring Boot project with the following details:
 
 Group: io.pivotal
+
 Artifact: cloud-native-spring
+
 Dependencies:
 
 - Spring Web Starter

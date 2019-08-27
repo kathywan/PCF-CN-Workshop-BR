@@ -18,8 +18,6 @@ This is hands-on classroom style session will provide developers with hands on e
 * Presentation: link:https://docs.google.com/presentation/d/1G2PqWQHOqhxnZXPTuho_Lg9RRMZcr4-JpSsibT3V16Q[PCF & Services]
 
 * Developer Workshop
-** Pre-work
-*** link:labs/labaccess.adoc[Get Environment Access]
 ** link:./00-introduction-to-cli.en.md[Lab 1 - Introduction to CLI]
 ** link:./01-building-a-spring-boot-application.en.md[Lab 2 - Build a Spring Boot Application]
 ** link:./02-adding-persistence-to-boot-application.en.md[Lab 3 - Add Data Persistence to Application]

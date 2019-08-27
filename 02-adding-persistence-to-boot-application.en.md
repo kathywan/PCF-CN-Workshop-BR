@@ -158,8 +158,7 @@ Next we'll import some data.
 
 ## Importing Data
 
-* Copy the [import.sql](labs/lab03/src/main/resources/db/migration/import.sql) file found in *cloudnative-spring-workshop/labs/* to **PCF-CN-Workshop-BR/labs/my_work/cloud-native-spring/src/main/resources/db/migration**.
-* Rename the file to be `V1_1__seed_data.sql`. (This is a small subset of a larger dataset containing all of the postal codes in the United States and its territories).
+* Use this file [V1_1__seed_data.sql](labs/lab03/src/main/resources/db/migration/V1_1__seed_data.sql) file found in *cloudnative-spring-workshop/labs/* to **PCF-CN-Workshop-BR/labs/my_work/cloud-native-spring/src/main/resources/db/migration**.
 
 * Restart the application.
 
@@ -268,7 +267,7 @@ Page<City> findByStateCode(@Param("stateCode") String stateCode, Pageable pageab
 mvn clean spring-boot:run
 ```
 
-* Access the application again. Notice that hypermedia for a new *search* endpoint has appeared.
+* Access the application again. Notice that hypermedia for a new *search* endpoint has appeared (look at the end of the output).
 
 ```bash
 http :8080/cities
@@ -394,15 +393,9 @@ mvn package
 applications:
 - name: cloud-native-spring
   random-route: true
-  memory: 1024M
+  memory: 1G
   instances: 1
-  path: ./build/libs/cloud-native-spring-1.0-SNAPSHOT-exec.jar
-  buildpacks:
-  - java_buildpack_offline
-  stack: cflinuxfs3
-  timeout: 180 # to give time for the data to import
-  env:
-    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  path: ./target/cloud-native-spring-0.0.1-SNAPSHOT.jar
 ```
 
 * Push to Cloud Foundry:
@@ -549,15 +542,10 @@ INFO 20 --- [           main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH0002
 ```yaml
 applications:
 - name: cloud-native-spring
+  memory: 1G
   random-route: true
-  memory: 1024M
   instances: 1
-  path: ./build/libs/cloud-native-spring-1.0-SNAPSHOT-exec.jar
-  buildpacks:
-  - java_buildpack_offline
-  timeout: 180 # to give time for the data to import
-  env:
-    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+  path: ./target/cloud-native-spring-0.0.1-SNAPSHOT.jar
   services:
     - mysql-database
 ```

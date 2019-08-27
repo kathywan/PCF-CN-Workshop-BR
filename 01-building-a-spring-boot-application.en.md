@@ -5,7 +5,11 @@ a standard greeting.
 
 ## Getting started
 
-Let's go to https://start.spring.io to create a new Spring Boot project.
+Let's go to https://start.spring.io to create a new Spring Boot project with the following details:
+
+Group: io.pivotal
+Artifact: cloud-native-spring
+Dependencies:
 
 - Spring Web Starter
 - Spring Data JPA
@@ -17,8 +21,7 @@ Let's go to https://start.spring.io to create a new Spring Boot project.
 
 Open this project in your editor/IDE of choice.
 
-<details>
-<summary>_STS/Eclipse Import with Gradle Help_</summary>
+
 
 <ol><li>Select _File
 &gt; Import…_</li>

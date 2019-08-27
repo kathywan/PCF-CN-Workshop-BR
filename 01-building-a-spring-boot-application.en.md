@@ -34,27 +34,6 @@ a new class named `GreetingController` in the aforementioned package.
 `io.pivotal.controller.GreetingController` (i.e.,
 **/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java**).
 
-```java
-package io.pivotal.controller;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class GreetingController {
-
-}
-```
-
-Add the following request handler to the class
-`io.pivotal.controller.GreetingController` (i.e.,
-_/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java_).
-
-```java
-@GetMapping("/")
-public String hello() {
-  return "Hello World!";
-}
-```
 Completed:
 
 ```java

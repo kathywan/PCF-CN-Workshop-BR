@@ -26,12 +26,10 @@ Open this project in your editor/IDE of choice.
 ## Add an Endpoint
 Within your editor/IDE complete the following steps:
 
-* Create a new
-package `io.pivotal.controller` underneath **src/main/java**.
 * Create
-a new class named `GreetingController` in the aforementioned package.
+a new class named `GreetingController` in the same package.
 * Add an `@RestController` annotation to the class
-`io.pivotal.controller.GreetingController` (i.e.,
+`GreetingController` (i.e.,
 **/cloud-native-spring/src/main/java/io/pivotal/controller/GreetingController.java**).
 
 Completed:

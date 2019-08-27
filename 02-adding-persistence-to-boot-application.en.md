@@ -156,7 +156,7 @@ Next we'll import some data.
 
 ## Importing Data
 
-* Copy the [import.sql](https://raw.githubusercontent.com/Pivotal-Field-Engineering/devops-workshop/master/labs/import.sql) file found in *cloudnative-spring-workshop/labs/* to **PCF-CN-Workshop-BR/labs/my_work/cloud-native-spring/src/main/resources/db/migration**.
+* Copy the [import.sql](labs/lab03/src/main/resources/db/migration/import.sql) file found in *cloudnative-spring-workshop/labs/* to **PCF-CN-Workshop-BR/labs/my_work/cloud-native-spring/src/main/resources/db/migration**.
 * Rename the file to be `V1_1__seed_data.sql`. (This is a small subset of a larger dataset containing all of the postal codes in the United States and its territories).
 
 * Restart the application.

@@ -106,19 +106,6 @@ Add application metadata, using a text editor (of choice)
   random-route: true
   instances: 1
   path: ./target/cloud-native-spring-0.0.1-SNAPSHOT.jar
-  buildpacks:
-  - java_buildpack_offline
-  stack: cflinuxfs3
-  env:
-    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
-```
-
-The above manifest entries will work with Java Buildpack 4.x series and
-JDK 8. If you built the app with JDK 11 and want to deploy it you will
-need to make an additional entry in your manifest, just below `JAVA_OPTS`, add:
-```yaml
----
-  JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
 ```
 
 Push application into Cloud Foundry

@@ -1,7 +1,7 @@
 
 # Adding Persistence to Boot Application
 
-In this lab we'll utilize Spring Boot, Spring Data, and Spring Data REST to create a fully-functional hypermedia-driven RESTful web service.  We'll then deploy it to Pivotal Cloud Foundry.  Along the way we'll take a brief look at [Flyway](https://flywaydb.org) which can help us manage updates to database schema and data.
+In this lab we'll utilize Spring Boot, Spring Data, and Spring Data REST to create a fully-functional hypermedia-driven RESTful web service.  We'll then deploy it to Pivotal Cloud Foundry. Along the way we'll take a brief look at [Flyway](https://flywaydb.org) which can help us manage updates to database schema and data.
 
 ## Create a Hypermedia-Driven RESTful Web Service with Spring Data REST (using JPA)
 
@@ -9,10 +9,10 @@ This application will allow us to create, read update and delete records in an [
 
 ## Add the domain object - City
 
-* Create the package `io.pivotal.domain` and in that package create the class `City`. Into that file you can paste the following source code, which represents cities based on postal codes, global coordinates, etc:
+* Create the package `io.pivotal.cloudnativespring.domain` and in that package create the class `City`. Into that file you can paste the following source code, which represents cities based on postal codes, global coordinates, etc:
 
 ```java
-package io.pivotal.domain;
+package io.pivotal.cloudnativespring.domain;
 
 @Data
 @Entity
@@ -49,19 +49,21 @@ Notice that we're using [JPA](http://docs.oracle.com/javaee/6/tutorial/doc/bnbpz
 
 -> Hint: imports should start with `javax.persistence` and `lombok`
 
-* Create the package `io.pivotal.repositories` and in that package create the interface `CityRepository`. Paste the following code and add appropriate imports:
+* Create the package `io.pivotal.cloudnativespring.repositories` and in that package create the interface `CityRepository`. Paste the following code and add appropriate imports:
 
 ```java
-package io.pivotal.repositories;
+package io.pivotal.cloudnativespring.repositories;
+
+import io.pivotal.cloudnativespring.domain.City;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "cities", path = "cities")
 public interface CityRepository extends PagingAndSortingRepository<City, Long> {
 }
 ```
 
-You’ll need to use your IDE’s features to add the appropriate import statements.
 
--> Hint: imports should start with `org.springframework.data.rest.core.annotation` and `org.springframework.data.repository`
 
 ## Use Flyway to manage schema
 

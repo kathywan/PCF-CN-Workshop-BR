@@ -101,8 +101,9 @@ touch manifest.yml
 ```
 Add application metadata, using a text editor (of choice)
 ```yaml
---- applications:
-  - name: cloud-native-spring
+--- 
+applications:
+- name: cloud-native-spring
   random-route: true
   instances: 1
   path: ./target/cloud-native-spring-0.0.1-SNAPSHOT.jar
@@ -113,18 +114,6 @@ Push application into Cloud Foundry
 cf push
 ```
 
--&gt; To specify an
-alternate manifest and buildpack, you could update the above to be:
-```bash
-cf push -f manifest.yml -b java_buildpack
-```
-Assuming the offline
-buildpack was installed and available for use with your targeted
-foundation. You can check for which buildpacks are available by
-executing
-```bash
-cf buildpacks
-```
 Find the URL created for your app in the
 health status report or issue the following command to see your running apps.
 
